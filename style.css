@@ -1,0 +1,43 @@
+    body {
+    
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      background-color:color-mix(in lab, red 40%, green 30%);
+      
+    }
+
+  
+h2{
+    text-align: center;
+    font-family: "consolas";
+}
+#box1{
+    border: 2px solid ;
+    border-radius: 12px;
+    background-color: bisque;
+    padding: 8px;
+    height: 190px;
+    
+    
+   
+}
+#ok{
+    text-align: center;
+}
+#nok{
+    text-align: center;
+}
+.com{
+    margin-top: 2px;
+
+
+}
+
+.moo{
+    margin-top: 2px;
+    
+    
+}

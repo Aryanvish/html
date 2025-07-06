@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+<button id="button">click</button>
+<script>
+    let change= document.getElementById("button")
+    function update(){
+        let input=prompt("Enter your name")
+        document.getElementById("button").innerHTML=input
+    }
+    change.add("click",update)
+    
+    
+    
+</script>
+<h1 id="h1class">hello from the other side</h1>
+
+<script>
+    document.getElementById("h1class").style.color = "aqua"
+</script>
+    
+</body>
+</html>
