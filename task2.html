@@ -6,33 +6,83 @@
     <title>Task2</title> 
     <form action ="" method="post">
         <ul>
+            <div id="sltmovie">
 
         <li style="margin-top: 40px;">
         <label for="movie watched" style="font-size: large;" >Select the movie watched recently</label><br>
-        <label for="movie1" >Housefull 5</label>
-        <input type="radio" id="movie1" value="movie1" name="movie"><br>
-        <label for="movie2"  >Kannappa</label>
-        <input type="radio" id="movie2" value="movie2" name="movie"><br>
-        <label for="movie3" >Fantastic 4</label>
-        <input type="radio" id="movie3" value="movie3" name="movie"><br>
-        <label for="movie4" >F1</label>
-        <input type="radio" id="movie4" value="movie4" name="movie">
+        <label for="movie1" ></label>
+        <input type="radio" id="movie1" value="HF5" name="movie">HF5<br>
+        <label for="movie2"  ></label>
+        <input type="radio" id="movie2" value="kanapa" name="movie">kanapa<br>
+        <label for="movie3" ></label>
+        <input type="radio" id="movie3" value="fantastic 4" name="movie">fantastic 4<br>
+        <label for="movie4" ></label>
+        <input type="radio" id="movie4" value="F1" name="movie">F1
+        </div>
         </li>
-        <li style="margin-top: 40px;">
+         <div id="sltplace">
+         <li style="margin-top: 40px;">
+
             <label for="places visited" style="font-size: large;">Select the places visited by you</label><br>
-            <label for="Cafe">Cafe</label>
-            <input type="checkbox" id="Cafe"><br>
-            <label for="College">College</label>
-            <input type="checkbox" id="College"><br>
-            <label for="Mall">Mall</label>
-            <input type="checkbox" id="Mall"><br>
-            <label for="Club">Club</label>
-            <input type="checkbox" id="Club"><br>
+            <label for="Cafe"></label>
+            <input type="checkbox" id="Cafe" value="Cafe" name="place">Cafe<br>
+            <label for="College"></label>
+            <input type="checkbox" id="College" value="College" name="place">College<br>
+            <label for="Mall"></label>
+            <input type="checkbox" id="Mall"  value="Mall" name="place">Mall<br>
+            <label for="Club"></label>
+            <input type="checkbox" id="Club" value="club" name="place">Club<br>
+            </div>
             
         </li>   
     </ul>
-    <input type="submit" style="margin-left: 35px;" id="submit">
+   
     </form>
+    <button id="select" style="margin-left: 35px;" >Submit </button><br>
+    <div>
+
+    
+
+    <textarea id="text" style="margin-left: 35px; margin-top: 20px;" rows="5" cols="50" ></textarea>
+    </div>
+    <script>
+        let cap= document.getElementById("select")
+        cap.addEventListener("click", paste)
+
+
+    function paste() {
+    const selctmovie = document.querySelector('input[name="movie"]:checked')
+    const selctplaces = document.querySelectorAll('input[name="place"]:checked')
+     let places 
+     let movie
+
+    
+    if (selctmovie != null) {
+        movie =   selctmovie.value;
+       
+    }
+    if (selctplaces.length >0) {
+     places = Array.from(selctplaces).map(function(cb) {
+          return cb.value;
+         })
+         
+        
+       
+    }
+    let name = prompt("Enter your name")
+    let ta = name +" watched "+ movie+ " and visited "
+     +places
+    document.getElementById("text").value = ta
+   
+
+    
+   
+}
+
+
+       
+
+    </script>
 
 
 </head>
